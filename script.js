@@ -30,12 +30,12 @@ function initializeTerrain() {
         // Water/speed up areas
         //createTerrainObject("/assets/water1.png", 100, 100, 120, 80, TERRAIN_EFFECTS.SPEED_UP),
         //createTerrainObject("/assets/water2.png", 300, 200, 100, 100, TERRAIN_EFFECTS.SPEED_UP),
-        createTerrainObject("/assets/river.png", 0, 0, 900, 480, TERRAIN_EFFECTS.SPEED_UP),
+        createTerrainObject("/assets/river.PNG", -10, 0, 900, 480, TERRAIN_EFFECTS.SPEED_UP),
         
         // Mud/slow down areas  
-        // createTerrainObject("/assets/mud1.png", 50, 250, 80, 60, TERRAIN_EFFECTS.SLOW_DOWN),
-        // createTerrainObject("/assets/mud2.png", 400, 150, 70, 70, TERRAIN_EFFECTS.SLOW_DOWN),
-        // createTerrainObject("/assets/puddle.png", 600, 400, 90, 50, TERRAIN_EFFECTS.SLOW_DOWN),
+        createTerrainObject("/assets/mud.png", 50, 500, 160, 120, TERRAIN_EFFECTS.SLOW_DOWN),
+        createTerrainObject("/assets/mud.png", 400, 150, 140, 140, TERRAIN_EFFECTS.SLOW_DOWN),
+        createTerrainObject("/assets/mud.png", 600, 400, 180, 100, TERRAIN_EFFECTS.SLOW_DOWN),
         
         // // Obstacles
         // createTerrainObject("/assets/rock1.png", 200, 300, 60, 60, TERRAIN_EFFECTS.OBSTACLE),
