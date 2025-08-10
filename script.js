@@ -1,7 +1,7 @@
 function startGame() {
     myGameArea.start();
 
-    duck1 = new duck(10, 7, ["/assets/frame1.png", "/assets/frame2.png", "/assets/frame3.png"], 50, 60)
+    duck1 = new duck(50, 40, ["/assets/frame1.PNG", "/assets/frame2.PNG"], 50, 60)
     duck1.walk()
 }
 
