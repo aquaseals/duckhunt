@@ -1,7 +1,8 @@
 function startGame() {
     myGameArea.start();
 
-    duck1 = new duck(10, 7, "/assets/placeholder.png", 50, 60)
+    duck1 = new duck(10, 7, ["/assets/frame1.png", "/assets/frame2.png", "/assets/frame3.png"], 50, 60)
+    duck1.walk()
 }
 
 var myGameArea = {
@@ -16,17 +17,27 @@ var myGameArea = {
     }
 }
 
-function duck(width, height, imgSrc, x, y) {
+function duck(width, height, frames, x, y) {
     this.width = width
     this.height = height
     this.x = x
     this.y = y
 
     this.image = new Image()
-    this.image.src = imgSrc
+    this.image.src = frames[0]
     this.update = function() {
         ctx = myGameArea.context
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height)
+    }
+    this.walk = function() {
+        let i = 0
+        let animate = setInterval(() => {
+            if (i >= frames.length) {
+                i = 0
+            }
+            this.image.src = frames[i]
+            i++
+        }, 100)
     }
 }
 
