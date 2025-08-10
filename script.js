@@ -43,6 +43,38 @@ function duck(width, height, frames, x, y) {
 
 function updateGameArea()  {
     myGameArea.clear()
-    duck1.x += 1
+    //duck1.x += 1
     duck1.update()
 }
+
+function moveup() {
+  duck1.y -= 1;
+}
+
+function movedown() {
+  duck1.y += 1;
+}
+
+function moveleft() {
+  duck1.x -= 1;
+}
+
+function moveright() {
+  duck1.x += 1;
+}
+
+document.addEventListener('keydown', function(e) {
+    let key = e.key
+    if (key === 'ArrowUp') {
+        moveup()
+
+    } else if (key === 'ArrowDown') {
+        movedown()
+
+    } else if (key === 'ArrowLeft') {
+        moveleft()
+
+    } else if (key === 'ArrowRight') {
+        moveright()
+    }
+})
